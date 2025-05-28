@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card p-4 shadow-sm bg-white">
+  <h2>Hello, {{ name }}!</h2>
+  <p>Your sign: <strong>{{ sign }}</strong> &mdash; Period: <strong>{{ period.capitalize() }}</strong></p>
+
+  <h4 class="mt-4">General</h4>
+  <p>{{ horoscope.description }}</p>
+
+  <h4 class="mt-3">Work & Career</h4>
+  <p>{{ horoscope.work }}</p>
+
+  <h4 class="mt-3">Relationships</h4>
+  <p>{{ horoscope.compatibility }}</p>
+
+  <h4 class="mt-4">🍀 Lucky Info</h4>
+  <ul>
+    <li>Lucky Color: {{ horoscope.color }}</li>
+    <li>Lucky Number: {{ horoscope.lucky_number }}</li>
+    <li>Compatible Sign: {{ horoscope.compatibility }}</li>
+  </ul>
+
+  <a href="/" class="btn btn-secondary mt-3">Try Again</a>
+</div>
+{% endblock %}
